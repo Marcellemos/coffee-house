@@ -1,0 +1,152 @@
+/* VARIÁVEIS DE DESIGN */
+        :root {
+            /* Cores — Dark Theme */
+            --color-primary: #e8c9a0;
+            --color-on-primary: #1a0f06;
+            --color-secondary: #c49a6c;
+            --color-background: #0f0b08;
+            --color-on-surface: #ede8e3;
+            --color-on-surface-variant: #a89b90;
+            --color-surface-container-low: #1c1611;
+            --color-surface-container-lowest: #161009;
+            --color-surface-container-highest: #2a211a;
+            --color-outline-variant: #3d3028;
+            --color-primary-fixed-dim: #7a5c3a;
+
+            /* Tipografia */
+            --font-display: 'EB Garamond', serif;
+            --font-body: 'Hanken Grotesk', sans-serif;
+            
+            /* Layout */
+            --max-width: 1280px;
+        }
+
+        /* ESTILOS GERAIS */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-on-surface);
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-family: inherit;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* NAVEGAÇÃO */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 50;
+            background: rgba(15, 11, 8, 0.75);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            height: 60px;
+            padding: 0 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            width: 60px; 
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            width: 100px;
+            height: auto;
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+            gap: 32px;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links { display: flex; }
+            .nav-container { padding: 16px 64px; }
+        }
+
+        .nav-link {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-on-surface-variant);
+            transition: all 0.2s;
+            padding-bottom: 4px;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--color-primary);
+        }
+
+        .nav-link.active {
+            border-bottom: 2px solid var(--color-primary);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .btn-icon {
+            color: var(--color-primary);
+            transition: transform 0.3s;
+        }
+        .btn-icon:hover { transform: scale(1.1); }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: var(--color-on-primary);
+            padding: 8px 24px;
+            border-radius: 9999px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: transform 0.3s;
+        }
+        .btn-primary:hover { transform: scale(1.05); }
+
+
+
