@@ -216,6 +216,7 @@
             letter-spacing: 0.05em;
             transition: all 0.5s;
         }
+
         .glass-panel:hover {
             color: var(--color-primary);
             transform: scale(1.05);
@@ -235,6 +236,152 @@
             0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
             40% { transform: translate(-50%, -10px); }
             60% { transform: translate(-50%, -5px); }
+        }
+
+         /* PRODUTOS EM DESTAQUE */
+        .products {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-tag {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 32px;
+            color: var(--color-primary);
+        }
+        @media (min-width: 768px) { .section-title { font-size: 48px; } }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        @media (min-width: 768px) { .products-grid { grid-template-columns: repeat(3, 1fr); } }
+
+        .product-card {
+            background: var(--color-surface-container-lowest);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+            border: 1px solid var(--color-outline-variant);
+            transition: all 0.5s;
+        }
+
+        .product-card:hover { 
+            transform: translateY(-8px); 
+        }
+
+        .product-img-wrapper {
+            aspect-ratio: 1/1;
+            margin-bottom: 24px;
+            overflow: hidden;
+            border-radius: 8px;
+            background: var(--color-surface-container-low);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s;
+        }
+
+        .product-card:hover .product-img {
+             transform: scale(1.1); 
+        }
+
+        .product-title {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: var(--color-primary);
+            margin-bottom: 8px;
+        }
+
+        .product-desc {
+            color: var(--color-on-surface-variant);
+            font-size: 16px;
+            margin-bottom: 24px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+
+        .btn-arrow {
+            color: var(--color-primary);
+            transition: transform 0.3s;
+        }
+        .product-card:hover .btn-arrow { transform: translateX(4px); }
+
+        /* CONFEITARIA */
+        .bakery {
+            background-color: var(--color-surface-container-low);
+            padding: 80px 0;
+        }
+
+        .bakery-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+        @media (min-width: 1024px) { .bakery-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        .bakery-list {
+            list-style: none;
+            margin-top: 40px;
+        }
+
+        .bakery-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border-bottom: 1px solid var(--color-outline-variant);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .bakery-num {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: var(--color-secondary);
+        }
+
+        .bakery-name {
+            font-family: var(--font-display);
+            font-size: 24px;
+            color: var(--color-primary);
+            transition: transform 0.3s;
+        }
+        .bakery-item:hover .bakery-name { transform: translateX(8px); }
+
+        .bakery-img-wrapper {
+            border-radius: 16px;
+            overflow: hidden;
+            aspect-ratio: 4/5;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
         }
 
 
