@@ -107,7 +107,7 @@
 
         .nav-link {
             font-size: 14px;
-            font-weight: 600px;
+            font-weight: 300;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             color: var(--color-on-surface-variant);
@@ -141,7 +141,7 @@
             padding: 8px 24px;
             border-radius: 9999px;
             font-size: 14px;
-            font-weight: 600px;
+            font-weight: 300;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             transition: transform 0.3s;
