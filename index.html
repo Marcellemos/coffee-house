@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Dancing+Script&family=Figtree:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 </head>
@@ -19,33 +19,34 @@
                 <img src="./img/logo.png" alt="Logo Lemos Coffee House">
             </div>
              <nav class="nav-links">
-                <a class="nav-link" href="#">Nossa História</a>
-                <a class="nav-link" href="#">Café Especial</a>
-                <a class="nav-link" href="#">Confeitaria</a>
-                <a class="nav-link" href="#">Endereços</a>
+                <a class="nav-link" href="#historia">Nossa História</a>
+                <a class="nav-link" href="#cafe-especial">Café Especial</a>
+                <a class="nav-link" href="#confeitaria">Confeitaria</a>
+                <a class="nav-link" href="#enderecos">Endereços</a>
                 
             </nav>
             <div class="nav-actions">
                 <button class="btn-icon" aria-label="Carrinho de compras">
                     <span class="material-symbols-outlined">shopping_bag</span>
                 </button>
-                <button class="btn-primary">Compre Agora</button>
+                <a class="btn-primary" href="#cafe-especial">Compre Agora</a>
             </div>            
         </div>
     </header>
 
     <main>
         <!-- Hero Section com Vídeo de Fundo -->
-        <section class="hero">
+        <section id="historia" class="hero">
             <div class="hero-video-container">
-                <video class="hero-video" autoplay loop muted playsinline>
-                    <source src="./videos/preparo.mp4" type="video/mp4">
-                </video>
+                <video class="hero-video" autoplay loop muted playsinline preload="metadata" poster="./img/hero-poster.jpg">
+                <source src="./videos/preparo.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
             </div>
             <div class="hero-overlay"></div>
             <div class="hero-content fade-in">
                 <h1 class="hero-title">A arte do<br>Preparo Perfeito</h1>
-                <button class="glass-panel">Veja nosso Cardápio</button>
+                <a class="glass-panel" href="#cafe-especial">Veja nosso Cardápio</a>
             </div>
             <div class="scroll-down">
                 <span class="material-symbols-outlined">expand_more</span>
@@ -53,7 +54,7 @@
         </section>
 
          <!-- Produtos em Destaque -->
-        <section class="products container">
+        <section id="cafe-especial" class="products container">
             <div class="section-header scroll-reveal">
                 <span class="section-tag">Gourmet</span>
                 <h2 class="section-title">Produtos em Destaque</h2>
@@ -72,7 +73,7 @@
                     </div>
                 </div>
                 <!-- Produto 2 -->
-                <div class="product-card scroll-reveal" style="transition-delay: 100ms;">
+                <div class="product-card scroll-reveal reveal-delay-100">
                     <div class="product-img-wrapper">
                         <img class="product-img" src="./img/img2.png" alt="Velvet House Blend Latte"/>
                     </div>
@@ -84,7 +85,7 @@
                     </div>
                 </div>
                 <!-- Produto 3 -->
-                <div class="product-card scroll-reveal" style="transition-delay: 200ms;">
+                <div class="product-card scroll-reveal reveal-delay-200">
                     <div class="product-img-wrapper">
                         <img class="product-img" src="./img/img3.png" alt="Café Gelado"/>
                     </div>
@@ -99,12 +100,12 @@
         </section>
 
         <!-- Confeitaria Artesanal -->
-        <section class="bakery">
+        <section id="confeitaria" class="bakery">
             <div class="bakery-grid container">
                 <div class="scroll-reveal">
                     <span class="section-tag">Assado diariamente</span>
-                    <h2 class="section-title" style="margin-bottom: 32px; line-height: 1.2;">Confeitaria Artesanal <br>Do Nosso Forno</h2>
-                    <p class="product-desc" style="font-size: 18px; max-width: 448px;">Nossos padeiros despertam antes do amanhecer para criar pequenos lotes de folhados sazonais, feitos com grãos selecionados e manteiga maturada.</p>
+                    <h2 class="section-title bakery-title">Confeitaria Artesanal <br>Do Nosso Forno</h2>
+                    <p class="product-desc bakery-description">Nossos padeiros despertam antes do amanhecer para criar pequenos lotes de folhados sazonais, feitos com grãos selecionados e manteiga maturada.</p>
                     <ul class="bakery-list">
                         <li class="bakery-item">
                             <span class="bakery-num">01</span>
@@ -122,9 +123,7 @@
                 </div>
                 <div class="scroll-reveal">
                     <div class="bakery-video">
-                        <video style="width: 100%; height: 100%; object-fit: cover;" autoplay loop muted playsinline>
-                        <source src="./videos/croissant.mp4" type="video/mp4">
-                        </video>
+                        <video class="bakery-video-element" muted loop playsinline preload="none" data-src="./videos/croissant.mp4" poster="./img/croissant-poster.jpg"></video>
                     </div>
                 </div>
             </div>
@@ -142,50 +141,43 @@
         <section class="gallery-section container">
             <div class="video-gallery scroll-reveal">
                 <div class="gallery-item">
-                    <video class="gallery-video" autoplay loop muted playsinline>
-                        <source src="./videos/cafe-1.mp4" type="video/mp4">
-                    </video>
+                    <video class="gallery-video" muted loop playsinline preload="none" data-src="./videos/cafe-1.mp4"></video>
                 </div>
                 <div class="gallery-item">
-                    <video class="gallery-video" autoplay loop muted playsinline>
-                        <source src="./videos/cafe-2.mp4" type="video/mp4">
-                    </video>
+                    <video class="gallery-video" muted loop playsinline preload="none" data-src="./videos/cafe-2.mp4"></video>
                 </div>
                 <div class="gallery-item">
-                    <video class="gallery-video" autoplay loop muted playsinline>
-                        <source src="./videos/cafe-3.mp4" type="video/mp4">
-                    </video>
+                    <video class="gallery-video" muted loop playsinline preload="none" data-src="./videos/cafe-3.mp4"></video>
                 </div>
                 <div class="gallery-item">
-                    <video class="gallery-video" autoplay loop muted playsinline>
-                        <source src="./videos/cafe-4.mp4" type="video/mp4">
-                    </video>
+                    <video class="gallery-video" muted loop playsinline preload="none" data-src="./videos/cafe-4.mp4"></video>
                 </div>
             </div>
 
             <!-- seção inscreva-se -->
             <div class="newsletter-panel scroll-reveal">
-                <h3 class="product-title" style="font-size: 32px; margin-bottom: 24px;">Junte-se a nós</h3>
-                <p class="product-desc" style="margin-bottom: 32px;">Inscreva-se para receber dicas exclusivas de preparo, lançamentos e eventos especiais.</p>
+                <h3 class="product-title newsletter-title">Junte-se a nós</h3>
+                <p class="product-desc newsletter-description">Inscreva-se para receber dicas exclusivas de preparo, lançamentos e eventos especiais.</p>
                 <form class="newsletter-form">
-                    <input class="newsletter-input" placeholder="Seu endereço de email" type="email" required/>
+                    <label class="sr-only" for="newsletter-email">Seu endereço de email</label>
+                    <input id="newsletter-email" class="newsletter-input" placeholder="Seu endereço de email" type="email" required/>
                     <button class="newsletter-btn" type="submit">Cadastre-se</button>
                 </form>
             </div>
         </section>
 
         <!-- Visite Nossa Casa / Localização -->
-        <section class="location">
+        <section id="enderecos" class="location">
             <img class="map-bg" src="./img/mapa.png" alt="Mapa fictício da região"/>
             <div class="location-card-wrapper">
                 <div class="location-card scroll-reveal">
-                    <h4 class="product-title" style="margin-bottom: 16px;">Visite nossa casa</h4>
-                    <p class="product-desc" style="margin-bottom: 16px;">Av. Paulista 123<br>São Paulo, SP</p>
-                    <div style="margin-bottom: 24px;">
-                        <div class="hours-row"><span style="font-weight:700;">Seg – Sex</span><span>07:00 – 19:00</span></div>
-                        <div class="hours-row"><span style="font-weight:700;">Sáb – Dom</span><span>08:00 – 20:00</span></div>
+                    <h4 class="product-title location-title">Visite nossa casa</h4>
+                    <p class="product-desc location-address">Av. Paulista 123<br>São Paulo, SP</p>
+                    <div class="location-hours">
+                        <div class="hours-row"><span class="hours-label">Seg – Sex</span><span>07:00 – 19:00</span></div>
+                        <div class="hours-row"><span class="hours-label">Sáb – Dom</span><span>08:00 – 20:00</span></div>
                     </div>
-                    <button class="btn-outline">Obter Direções</button>
+                    <a class="btn-outline" href="https://www.google.com/maps/search/?api=1&query=Av.+Paulista+123,+São+Paulo,+SP" target="_blank" rel="noopener noreferrer">Obter Direções</a>
                 </div>
             </div>
         </section>
@@ -196,9 +188,11 @@
         <div class="footer-grid container">
             <div>
                 <div class="footer-brand-title">Lemos Coffee House</div>
-                <p class="product-desc" style="font-size:14px;">Onde o café se torna uma experiência.</p>
+                <p class="product-desc footer-description">Onde o café se torna uma experiência.</p>
                 <div class="footer-socials">
-                    <img width="30" height="30" src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram-new--v1"/>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img width="30" height="30" src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="">
+                </a>
                     <img width="30" height="30" src="https://img.icons8.com/ios/50/facebook-new.png" alt="facebook-new"/>
                 </div>
             </div>
@@ -230,8 +224,8 @@
             </div>
         </div>
         <div class="footer-bottom container">
-            <p class="product-desc" style="font-size: 14px; text-align: center;">&copy; 2026 Lemos Coffee House. Todos os direitos reservados.</p>
-            <div style="display: flex; gap: 32px; font-size: 14px;">
+            <p class="product-desc footer-copyright">&copy; 2026 Lemos Coffee House. Todos os direitos reservados.</p>
+            <div class="footer-legal-links">
                 <a class="product-desc" href="#">Política de Privacidade</a>
                 <a class="product-desc" href="#">Termos de Serviço</a>
             </div>
